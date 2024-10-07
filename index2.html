@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* Custom hover effect using CSS */
+        .nav-link:hover {
+            color: #F6821F !important;
+            /* Bootstrap primary blue color on hover */
+            text-decoration: underline;
+            /* Underline on hover */
+        }
+
+        .nav-icons:hover {
+            color: #F6821F !important;
+        }
+
+        .transform-scale-on-hover {
+            transition: transform 0.5s ease;
+            cursor: pointer;
+            /* Smooth transition */
+        }
+
+        .transform-scale-on-hover:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+            /* Scale image on hover */
+        }
+
+        .img-container {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            /* Ensure the image does not overflow */
+        }
+
+        .img-container img {
+            transition: transform 0.3s ease;
+            /* Smooth transition */
+        }
+
+        .img-container:hover img {
+            transform: scale(1.1);
+            /* Scale the image on hover */
+        }
+        .footer-section a{
+            text-decoration: none;
+        }
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid"> <!-- Use container-fluid for full-width -->
+        <div class="row">
+            <!-- Customer Support Section -->
+            <div class="col-12 bg-dark text-white p-2 d-flex justify-content-center align-items-center">
+                <h6>
+                    <a href="tel:+042111000990" class="text-white text-decoration-none"
+                        aria-label="Call Customer Support">
+                        Customer Support 📞 042-111-000-990
+                    </a>
+                </h6>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carousel Section -->
+
+
+    <nav class="navbar navbar-expand-md navbar-light bg-white">
+        <div class="container-fluid py-2">
+            <a class="navbar-brand mx-4 d-flex justify-content-center align-items-center" href="#">
+                <img src="images/logo.avif" alt="logo" style="width: 90px;">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="w-100 d-none d-md-block"> <!-- Only visible on desktop -->
+                    <div class="row">
+                        <!-- Upper Links -->
+                        <div class="col-12">
+                            <ul class="nav justify-content-center">
+                                <li class="nav-item fw-bold">
+                                    <a class="nav-link text-dark" href="#">Home</a>
+                                </li>
+                                <li class="nav-item fw-bold">
+                                    <a class="nav-link text-dark" href="#">New Arrivals</a>
+                                </li>
+                                <li class="nav-item fw-bold">
+                                    <a class="nav-link text-dark" href="#">Shop All</a>
+                                </li>
+                                <li class="nav-item fw-bold">
+                                    <a class="nav-link text-dark" href="#">Skin Care</a>
+                                </li>
+                                <li class="nav-item fw-bold">
+                                    <a class="nav-link text-dark" href="#">Hair Care</a>
+                                </li>
+                                <li class="nav-item fw-bold">
+                                    <a class="nav-link text-dark" href="#">Bundle Deals</a>
+                                </li>
+                                <li class="nav-item fw-bold">
+                                    <a class="nav-link text-dark" href="#">Vitamin C Products</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Lower Links -->
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="nav justify-content-center">
+                                <li class="nav-item fw-bold">
+                                    <a class="nav-link text-dark" href="#">Rice Extract Products</a>
+                                </li>
+                                <li class="nav-item fw-bold">
+                                    <a class="nav-link text-dark" href="#">Happy Customers</a>
+                                </li>
+                                <li class="nav-item fw-bold">
+                                    <a class="nav-link text-dark" href="#">Beauty Blog</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="navbar-nav px-4 ms-auto d-md-none"> <!-- Only visible on mobile -->
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">New Arrivals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">Shop All</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">Skin Care</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">Hair Care</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">Bundle Deals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">Vitamin C Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">Rice Extract Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">Happy Customers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">Beauty Blog</a>
+                    </li>
+                </ul>
+
+                <!-- Icons (Visible in Desktop) -->
+                <div class="d-none d-md-flex col-lg-2 justify-content-center align-items-center">
+                    <a href="#" class="nav-icons text-dark me-3"><i class="fas fa-search fa-lg"></i></a>
+                    <a href="#" class="nav-icons text-dark me-3"><i class="fas fa-user fa-lg"></i></a>
+                    <a href="#" class="nav-icons text-dark"><i class="fas fa-shopping-cart fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="images/bn1.webp" alt="First slide"> <!-- Replace with your image URL -->
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="images/bn2.webp" alt="Second slide">
+                <!-- Replace with your image URL -->
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </a>
+    </div>
+
+    <div class="container my-5">
+        <div class="text-center mb-4">
+            <h2>Shop By Category</h2>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card text-center">
+                    <div class="overflow-hidden"> <!-- Added overflow-hidden for zoom effect -->
+                        <img src="images/c1.webp" class="card-img-top img-fluid transform-scale-on-hover" alt="Gel"
+                            width="380" height="380">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Gel</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card text-center">
+                    <div class="overflow-hidden"> <!-- Added overflow-hidden for zoom effect -->
+                        <img src="images/c2.webp" class="card-img-top img-fluid transform-scale-on-hover"
+                            alt="Face Wash" width="380" height="380">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Face Wash</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card text-center">
+                    <div class="overflow-hidden"> <!-- Added overflow-hidden for zoom effect -->
+                        <img src="images/c3.webp" class="card-img-top img-fluid transform-scale-on-hover"
+                            alt="Face Mask" width="380" height="380">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Face Mask</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card text-center">
+                    <div class="overflow-hidden"> <!-- Added overflow-hidden for zoom effect -->
+                        <img src="images/c4.webp" class="card-img-top img-fluid transform-scale-on-hover" alt="Gel"
+                            width="380" height="380">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Shampoo</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card text-center">
+                    <div class="overflow-hidden"> <!-- Added overflow-hidden for zoom effect -->
+                        <img src="images/c5.webp" class="card-img-top img-fluid transform-scale-on-hover"
+                            alt="Face Wash" width="380" height="380">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Lotion</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card text-center">
+                    <div class="overflow-hidden"> <!-- Added overflow-hidden for zoom effect -->
+                        <img src="images/c6.webp" class="card-img-top img-fluid transform-scale-on-hover"
+                            alt="Face Mask" width="380" height="380">
+                    </div>
+                    <div class="card-body">
+                        <a href="#" class="text-dark text-decoration-none">
+                            <h3 class="card-title">Face Mask</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="best-selling-section ">
+        <div class="container">
+            <h1 class="text-center mb-4 py-2">Best Selling</h1>
+            <div class="row">
+                <!-- Product 1 -->
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card text-center">
+                        <div class="img-container">
+                            <img src="images/p1.avif" alt="BNB Rice Extract Face Wash" class="card-img-top"
+                                loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">BNB Rice Extract Face Wash</h2>
+                            <div class="product-rating mb-2">
+                                <span class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </span>
+                                <span class="rating-value">(4.9)</span>
+                                <span class="review-count">72 Reviews</span>
+                            </div>
+                            <div class="product-price mb-3">
+                                <strong>Rs. 999</strong>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-primary" aria-label="Add BNB Rice Extract Face Wash to Cart">Add
+                                    to Cart</button>
+                                <button class="btn btn-secondary">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card text-center">
+                        <div class="img-container">
+                            <img src="images/p2.avif" alt="BNB Rice Extract Face Wash" class="card-img-top"
+                                loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">BNB Rice Extract Face Wash</h2>
+                            <div class="product-rating mb-2">
+                                <span class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </span>
+                                <span class="rating-value">(4.9)</span>
+                                <span class="review-count">72 Reviews</span>
+                            </div>
+                            <div class="product-price mb-3">
+                                <strong>Rs. 999</strong>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-primary" aria-label="Add BNB Rice Extract Face Wash to Cart">Add
+                                    to Cart</button>
+                                <button class="btn btn-secondary">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card text-center">
+                        <div class="img-container">
+                            <img src="images/p3.avif" alt="BNB Rice Extract Face Wash" class="card-img-top"
+                                loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">BNB Rice Extract Face Wash</h2>
+                            <div class="product-rating mb-2">
+                                <span class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </span>
+                                <span class="rating-value">(4.9)</span>
+                                <span class="review-count">72 Reviews</span>
+                            </div>
+                            <div class="product-price mb-3">
+                                <strong>Rs. 999</strong>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-primary" aria-label="Add BNB Rice Extract Face Wash to Cart">Add
+                                    to Cart</button>
+                                <button class="btn btn-secondary">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card text-center">
+                        <div class="img-container">
+                            <img src="images/p4.avif" alt="BNB Rice Extract Face Wash" class="card-img-top"
+                                loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">BNB Rice Extract Face Wash</h2>
+                            <div class="product-rating mb-2">
+                                <span class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </span>
+                                <span class="rating-value">(4.9)</span>
+                                <span class="review-count">72 Reviews</span>
+                            </div>
+                            <div class="product-price mb-3">
+                                <strong>Rs. 999</strong>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-primary" aria-label="Add BNB Rice Extract Face Wash to Cart">Add
+                                    to Cart</button>
+                                <button class="btn btn-secondary">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card text-center">
+                        <div class="img-container">
+                            <img src="images/p5.avif" alt="BNB Rice Extract Face Wash" class="card-img-top"
+                                loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">BNB Rice Extract Face Wash</h2>
+                            <div class="product-rating mb-2">
+                                <span class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </span>
+                                <span class="rating-value">(4.9)</span>
+                                <span class="review-count">72 Reviews</span>
+                            </div>
+                            <div class="product-price mb-3">
+                                <strong>Rs. 999</strong>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-primary" aria-label="Add BNB Rice Extract Face Wash to Cart">Add
+                                    to Cart</button>
+                                <button class="btn btn-secondary">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card text-center">
+                        <div class="img-container">
+                            <img src="images/p6.avif" alt="BNB Rice Extract Face Wash" class="card-img-top"
+                                loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">BNB Rice Extract Face Wash</h2>
+                            <div class="product-rating mb-2">
+                                <span class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </span>
+                                <span class="rating-value">(4.9)</span>
+                                <span class="review-count">72 Reviews</span>
+                            </div>
+                            <div class="product-price mb-3">
+                                <strong>Rs. 999</strong>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-primary" aria-label="Add BNB Rice Extract Face Wash to Cart">Add
+                                    to Cart</button>
+                                <button class="btn btn-secondary">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card text-center">
+                        <div class="img-container">
+                            <img src="images/p7.avif" alt="BNB Rice Extract Face Wash" class="card-img-top"
+                                loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">BNB Rice Extract Face Wash</h2>
+                            <div class="product-rating mb-2">
+                                <span class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </span>
+                                <span class="rating-value">(4.9)</span>
+                                <span class="review-count">72 Reviews</span>
+                            </div>
+                            <div class="product-price mb-3">
+                                <strong>Rs. 999</strong>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-primary" aria-label="Add BNB Rice Extract Face Wash to Cart">Add
+                                    to Cart</button>
+                                <button class="btn btn-secondary">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card text-center">
+                        <div class="img-container">
+                            <img src="images/p8.avif" alt="BNB Rice Extract Face Wash" class="card-img-top"
+                                loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">BNB Rice Extract Face Wash</h2>
+                            <div class="product-rating mb-2">
+                                <span class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </span>
+                                <span class="rating-value">(4.9)</span>
+                                <span class="review-count">72 Reviews</span>
+                            </div>
+                            <div class="product-price mb-3">
+                                <strong>Rs. 999</strong>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-primary" aria-label="Add BNB Rice Extract Face Wash to Cart">Add
+                                    to Cart</button>
+                                <button class="btn btn-secondary">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card text-center">
+                        <div class="img-container">
+                            <img src="images/p1.avif" alt="BNB Rice Extract Face Wash" class="card-img-top"
+                                loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">BNB Rice Extract Face Wash</h2>
+                            <div class="product-rating mb-2">
+                                <span class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </span>
+                                <span class="rating-value">(4.9)</span>
+                                <span class="review-count">72 Reviews</span>
+                            </div>
+                            <div class="product-price mb-3">
+                                <strong>Rs. 999</strong>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-primary" aria-label="Add BNB Rice Extract Face Wash to Cart">Add
+                                    to Cart</button>
+                                <button class="btn btn-secondary">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="video-section my-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12">
+                    <div class="position-relative overflow-hidden rounded shadow-lg">
+                        <!-- Added rounded corners and shadow -->
+                        <video
+                            src="videos/Glow%20&%20Lovely%20(formerly%20Fair%20&%20Lovely)%20BB%20Cream%20(Hindi).mp4"
+                            autoplay muted loop class="product-video w-100 h-100"
+                            style="transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 30px rgba(0, 0, 0, 0.5)';"
+                            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-12 mt-4 mt-lg-0"> <!-- Added margin for spacing on smaller screens -->
+                    <div class="video-content">
+                        <h2 class="text-primary">Glow & Lovely BB Cream - Your Daily Glow</h2>
+                        <!-- Changed heading color -->
+                        <p>Glow & Lovely BB Cream, formerly known as Fair & Lovely BB Cream, offers the perfect
+                            combination
+                            of instant coverage and natural glow. Enriched with multi-vitamins, it not only provides you
+                            with
+                            an even skin tone but also helps to hide imperfections and gives you a radiant finish.</p>
+                        <p>Watch the video to learn how you can get the perfect everyday look with Glow & Lovely BB
+                            Cream,
+                            giving you a flawless, glowing complexion in just a few steps.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-3 py-md-5">
+        <div class="container">
+            <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
+                <div class="col-12 col-lg-6 col-xl-5">
+                    <img class="img-fluid rounded shadow" loading="lazy"
+                        src="images/441581776_966053341591910_8396076109723920256_n.webp" alt="About 1">
+                </div>
+                <div class="col-12 col-lg-6 col-xl-7">
+                    <div class="row justify-content-xl-center">
+                        <div class="col-12 col-xl-11">
+                            <h2 class="mb-4 text-primary">Who Are We?</h2> <!-- Added color to the heading -->
+                            <p class="lead fs-4 text-secondary mb-3">At BNB Beauty, we empower individuals to create
+                                stunning brands and exceptional beauty products. Our mission is to provide captivating
+                                services that resonate with our customers.</p>
+                            <p class="mb-5">As a rapidly growing company, we remain anchored in our core values:
+                                collaboration, innovation, and unwavering customer satisfaction. We constantly seek new
+                                ways to enhance our product offerings and elevate the beauty experience.</p>
+                            <div class="row gy-4 gy-md-0 gx-xxl-5">
+                                <div class="col-12 col-md-6">
+                                    <div class="d-flex align-items-start"> <!-- Aligned items to the start -->
+                                        <div class="me-4 text-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                                fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h3 class="h5 mb-2">Versatile Brand</h3>
+                                            <!-- Changed heading to h3 for consistency -->
+                                            <p class="text-secondary mb-0">We craft beauty experiences that resonate
+                                                across all platforms, embracing the essence of versatility.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="d-flex align-items-start"> <!-- Aligned items to the start -->
+                                        <div class="me-4 text-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                                fill="currentColor" class="bi bi-fire" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z" />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h3 class="h5 mb-2">Digital Agency</h3>
+                                            <!-- Changed heading to h3 for consistency -->
+                                            <p class="text-secondary mb-0">We believe in innovation, merging creativity
+                                                with sophistication to redefine beauty standards.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container my-5 position-relative">
+        <div class="text-center mb-4">
+            <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact" class="rounded-circle shadow-lg position-absolute" style="top: -30px; left: 50%; transform: translateX(-50%); width: 75px; height: 75px;" />
+        </div>
+        <form method="post" class="shadow-lg p-5 rounded bg-white mt-5"> <!-- Using Bootstrap's mt-5 class -->
+            <h3 class="text-center mb-2 text-primary">Drop Us a Message</h3>
+            <p class="text-center mb-4 text-muted">We'd love to hear from you! Please fill out the form below.</p>
+            <div class="row g-3">
+                <!-- Left Column: Name, Email, Phone -->
+                <div class="col-md-6">
+                    <div class="form-group py-2">
+                        <input type="text" name="txtName" class="form-control border-primary" placeholder="Your Name *" required />
+                    </div>
+                    <div class="form-group py-2">
+                        <input type="email" name="txtEmail" class="form-control border-primary" placeholder="Your Email *" required />
+                    </div>
+                    <div class="form-group py-2">
+                        <input type="tel" name="txtPhone" class="form-control border-primary" placeholder="Your Phone Number *" required />
+                    </div>
+                </div>
+    
+                <!-- Right Column: Message Box -->
+                <div class="col-md-6">
+                    <div class="form-group py-2">
+                        <textarea name="txtMsg" class="form-control border-primary" placeholder="Your Message *" rows="6" required></textarea>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Button placed in full width below the message box -->
+            <div class="text-center mt-4">
+                <input type="submit" name="btnSubmit" class="btn btn-primary btn-lg px-4" value="Send Message" />
+            </div>
+        </form>
+    </div>
+
+    <footer class="footer bg-light py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Information Section -->
+                <div class="col-md-3 footer-section">
+                    <h4 class="text-dark">Contact Info</h4>
+                    <div class="d-flex align-items-center mb-2 mt-4">
+                        <i class="fas fa-map-marker-alt me-2"></i>
+                        <span>Lahore, Islamabad</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-map-marker-alt me-2"></i>
+                        <span>Karachi</span>
+                    </div>
+                    <div>
+                        <h5 class="text-dark">For Customer Support</h5>
+                        <h6 class="text-dark">10 A.M to 8 P.M (Monday to Sat)</h6>
+                    </div>
+                    <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-phone me-2"></i>
+                        <span><a href="tel:+9233100000000" class="text-dark">92-331-00000000</a></span>
+                    </div>
+                    <div class="d-flex align-items-center mb-2">
+                        <i class="fab fa-whatsapp me-2"></i>
+                        <span><a href="https://wa.me/9233100000000" class="text-dark">92-331-00000000</a></span>
+                    </div>
+                    <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-envelope me-2"></i>
+                        <span><a href="mailto:bnbproducts@gmail.com" class="text-dark">bnbproducts@gmail.com</a></span>
+                    </div>
+                </div>
+    
+                <!-- Map Section -->
+                <div class="col-md-3 footer-section">
+                    <h4 class="text-dark">Our Location</h4>
+                    <div class="map-container mt-4">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217759.99380853778!2d74.3343893!3d31.482940349999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190483e58107d9%3A0xc23abe6ccc7e2462!2sLahore%2C%20Punjab!5e0!3m2!1sen!2s!4v1725905399315!5m2!1sen!2s"
+                            style="width: 100%; height: 350px; border: none;" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                </div>
+    
+                <!-- Shop Section -->
+                <div class="col-md-3 footer-section">
+                    <h4 class="text-dark">Shop</h4>
+                    <ul class="list-unstyled mt-4">
+                        <li><a href="#" class="text-dark">Best Selling</a></li>
+                        <li><a href="#" class="text-dark">Rice Extract Products</a></li>
+                        <li><a href="#" class="text-dark">Vitamin C Products</a></li>
+                        <li><a href="#" class="text-dark">Happy Customer</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Help Section & Newsletter Signup -->
+                <div class="col-md-3 footer-section">
+                    <h4 class="text-dark ">Help</h4>
+                    <ul class="list-unstyled mt-4">
+                        <li><a href="#" class="text-dark">Happy Customer</a></li>
+                        <li><a href="#" class="text-dark">Privacy Policy</a></li>
+                        <li><a href="#" class="text-dark">Refund Policy</a></li>
+                        <li><a href="#" class="text-dark">Shipping Policy</a></li>
+                        <li><a href="#" class="text-dark">Terms of Service</a></li>
+                        <li><a href="#" class="text-dark">FAQs</a></li>
+                    </ul>
+                    <h4 class="text-dark mt-4">Newsletter Signup</h4>
+                    <p class="text-muted">Subscribe to our newsletter and get 5% off your first purchase</p>
+                    <input type="text" placeholder="Email" class="form-control mb-4" />
+                    <button type="button" class="btn btn-outline-primary">Subscribe</button>
+                </div>
+            </div>
+    
+            <!-- Divider Line -->
+            <div class="divider my-4">
+                <svg height="2" width="100%" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="0" y1="1" x2="100%" y2="1" stroke="#555353" stroke-width="2" />
+                </svg>
+            </div>
+    
+            <!-- Social Media Icons -->
+            <div class="d-flex justify-content-between">
+                <div class="copyright text-muted">© Copyright BNB Products 2024</div>
+                <div class="social-media">
+                    <a href="#" aria-label="Facebook" class="text-dark me-2"><i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="#" aria-label="Instagram" class="text-dark me-2"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="#" aria-label="TikTok" class="text-dark"><i class="fab fa-tiktok fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
